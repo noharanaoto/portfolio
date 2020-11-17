@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hex Clock</title>
+    <link rel="stylesheet" href="SheetTopic3.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <a href="../index.html">
+          <div class="head-left">
+            <img src="../画像/家.png" alt="home icon">
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!---------------------------------------->
+
+    <div class="main">
+      <div class="title">
+        <h1>Hex Clock</h1>
+      </div>
+      <hr>
+
+      <div class="contena">
+        <div id="back">
+            <div id="clock1"></div>
+            <div id="clock2"></div>
+            <div id="name"></div>
+        </div>
+      </div>
+      <div class="explain">
+        <h2>はじめに</h2>
+        JavaScriptの勉強中に定番であるデジタル時計をアレンジしてカラーコード時計を作りました。
+        時・分・秒それぞれ00~FFの間で段階的に変化させたかったので、00~FFを10進数に変換し0~255を時では24分割、分と秒では60分割し、
+        それぞれ取得時刻に合わせて段階的に変化させています。
+        JavaScriptはIEEE754と言う規格に沿っているので小数点の計算ではわずかな誤差が出てしまい、誤差なく計算するプログラムを書くのに苦労しました。
+        <a href="https://qiita.com/nohara_naoto">こちら</a>に詳しく書いた記事を投稿しています。
+        <h2>改善点・手を加えたい部分</h2>
+        <ul>
+          <li>小数点の計算で同じような処理を複数行書いているので簡略化する</li>
+          <li>現在表示されている色の名前を出す</li>
+          <li>明度に合わせて文字の色を黒と白に変える</li>
+        </ul>
+      </div>
+
+      <hr>
+    </div>
+
+    <!---------------------------------------->
+
+    <footer>
+    noraha naoto
+    </footer>
+
+    <script type="text/javascript" src="./myscript.js"></script>
+  </body>
+</html>

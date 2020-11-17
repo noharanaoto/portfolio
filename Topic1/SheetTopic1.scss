@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+@mixin slide-motion($partnumber){
+
+  .number#{$partnumber}{
+    display: block;
+    text-align: center;
+  }
+
+  .btn-wrapper#{$partnumber} {
+    display: block;
+    clear: both;
+    text-align: center;
+    border: solid;
+    border-color: #fff;
+    background-color: #696969;
+    color:#fff;
+    .up-btn#{$partnumber}{
+      cursor: pointer;
+      display: none;
+    }
+    .down-btn#{$partnumber}{
+      cursor: pointer;
+    }
+  }
+
+  .slides#{$partnumber}{
+    display: inline;
+    text-align: center;
+    img{
+      width: 125px;
+    }
+    .slide#{$partnumber}{
+      display: none;
+    }
+    .active#{$partnumber}{
+      display: block;
+    }
+    }
+}
+
+//-----------------------------------------
+
+header{
+  background-color: #fff;
+
+  .container {
+    background-color: #696969;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+
+    .head-left{
+      width: 50px;
+      height: 50px;
+      margin: 0 0 0 10px;
+      position: relative;
+      &:hover{
+        opacity: 0.1;
+        background-color: #696969;
+        transition: 0.5s;
+      }
+      img{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translateY(-50%) translateX(-50%);/*要素の大きさの半分ずつを戻す*/
+      }
+      }
+    }
+  }
+
+//-----------------------------------------
+
+.main{
+  height: 1000px;
+
+  .contena{
+    height: 800px;
+
+    .content{
+      height: 600px;
+      text-align: center;
+
+      .part{
+        float:left;
+        width: 200px;
+        height: 200px;
+      }
+
+      .part1{
+      @include slide-motion(1);
+      }
+
+      .part2{
+      @include slide-motion(2);
+      }
+
+      .part3{
+      @include slide-motion(3);
+      }
+
+      }
+    }
+}
+
+//-----------------------------------------
+
+footer {
+	margin: 100px 0 32px;
+	color: #2b546a;
+	font-size: 14px;
+	text-align: center;
+}

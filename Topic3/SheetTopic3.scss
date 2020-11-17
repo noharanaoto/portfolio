@@ -7,6 +7,8 @@ a {
   text-decoration: none;
 }
 
+//-----------------------------------------
+
 header{
   background-color: #fff;
 
@@ -45,8 +47,8 @@ header{
   width: 100%;
 
   .title{
+    text-align: center;
     h1{
-      text-align: center;
       width: 60%;
       margin: 50px auto;
     }
@@ -60,29 +62,51 @@ header{
     border: none;
   }
 
-  .contena{
+  #back{
+    width: 800px;
+    height: 300px;
     margin: 0 auto;
-    height: auto;
-    width: 60%;
+    background-color: #696969;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: space-between;
-
-    .lesson{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 15em;
-      width: 15em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #clock1,#clock2{
+      font-size: 36px;
+      font-weight: 100;
       color: #fff;
-      background-color: #696969;
-      &:hover{
-        opacity: 0.1;
-        transition: 0.5s;
+      font-family:  Menlo,monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    #clock2{
+      font-size: 24px;
+    }
+  }
+  .explain{
+    margin: 0 auto;
+    width: 800px;
+    text-align: left;
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+      display: table;
+      li{
+        display: table-row;
+        margin-bottom: 0.5em;
+        &::after{
+          content: "";
+          display: block;
+          margin-bottom: 0.5em;
+        }
+        &::before{
+          content: "・";
+          display: table-cell;
+          margin-bottom: 0.4em;
+        }
       }
     }
- }
+  }
 }
 
 //-----------------------------------------

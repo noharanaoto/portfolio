@@ -34,35 +34,54 @@ header {
 .main {
   height: auto;
   width: 100%; }
-  .main .title h1 {
-    text-align: center;
-    width: 60%;
-    margin: 50px auto; }
+  .main .title {
+    text-align: center; }
+    .main .title h1 {
+      width: 60%;
+      margin: 50px auto; }
   .main hr {
     width: 60%;
     margin: 50px auto;
     background-color: #696969;
     height: 1px;
     border: none; }
-  .main .contena {
+  .main #back {
+    width: 800px;
+    height: 300px;
     margin: 0 auto;
-    height: auto;
-    width: 60%;
+    background-color: #696969;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: space-between; }
-    .main .contena .lesson {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 15em;
-      width: 15em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .main #back #clock1, .main #back #clock2 {
+      font-size: 36px;
+      font-weight: 100;
       color: #fff;
-      background-color: #696969; }
-      .main .contena .lesson:hover {
-        opacity: 0.1;
-        transition: 0.5s; }
+      font-family: Menlo,monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase; }
+    .main #back #clock2 {
+      font-size: 24px; }
+  .main .explain {
+    margin: 0 auto;
+    width: 800px;
+    text-align: left; }
+    .main .explain ul {
+      list-style-type: none;
+      padding-left: 0;
+      display: table; }
+      .main .explain ul li {
+        display: table-row;
+        margin-bottom: 0.5em; }
+        .main .explain ul li::after {
+          content: "";
+          display: block;
+          margin-bottom: 0.5em; }
+        .main .explain ul li::before {
+          content: "・";
+          display: table-cell;
+          margin-bottom: 0.4em; }
 
 footer {
   margin: 100px 0 32px;
@@ -70,4 +89,4 @@ footer {
   font-size: 14px;
   text-align: center; }
 
-/*# sourceMappingURL=stylesheet.css.map */
+/*# sourceMappingURL=SheetTopic3.css.map */
