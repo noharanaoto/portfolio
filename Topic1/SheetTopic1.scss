@@ -9,6 +9,7 @@ a {
 
 ul{
   list-style: none;
+  padding-left: 0;
 }
 
 @mixin slide-motion($partnumber){
@@ -86,14 +87,29 @@ header{
 //-----------------------------------------
 
 .main{
-  height: 1000px;
+  height: auto;
+  width: 100%;
+
+  .title{
+    text-align: center;
+    h1{
+      width: 60%;
+      margin: 50px auto;
+    }
+  }
+
+  hr{
+    width: 60%;
+    margin: 50px auto;
+    background-color: #696969;
+    height: 1px;
+    border: none;
+  }
 
   .contena{
     height: 800px;
-
-    .content{
-      height: 600px;
-      text-align: center;
+    display: flex;
+    justify-content: center;
 
       .part{
         float:left;
@@ -113,7 +129,6 @@ header{
       @include slide-motion(3);
       }
 
-      }
     }
 }
 

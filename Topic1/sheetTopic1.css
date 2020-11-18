@@ -7,7 +7,8 @@ a {
   text-decoration: none; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
 
 header {
   background-color: #fff; }
@@ -35,91 +36,102 @@ header {
         /*要素の大きさの半分ずつを戻す*/ }
 
 .main {
-  height: 1000px; }
+  height: auto;
+  width: 100%; }
+  .main .title {
+    text-align: center; }
+    .main .title h1 {
+      width: 60%;
+      margin: 50px auto; }
+  .main hr {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #696969;
+    height: 1px;
+    border: none; }
   .main .contena {
-    height: 800px; }
-    .main .contena .content {
-      height: 600px;
+    height: 800px;
+    display: flex;
+    justify-content: center; }
+    .main .contena .part {
+      float: left;
+      width: 200px;
+      height: 200px; }
+    .main .contena .part1 .number1 {
+      display: block;
       text-align: center; }
-      .main .contena .content .part {
-        float: left;
-        width: 200px;
-        height: 200px; }
-      .main .contena .content .part1 .number1 {
-        display: block;
-        text-align: center; }
-      .main .contena .content .part1 .btn-wrapper1 {
-        display: block;
-        clear: both;
-        text-align: center;
-        border: solid;
-        border-color: #fff;
-        background-color: #696969;
-        color: #fff; }
-        .main .contena .content .part1 .btn-wrapper1 .up-btn1 {
-          cursor: pointer;
-          display: none; }
-        .main .contena .content .part1 .btn-wrapper1 .down-btn1 {
-          cursor: pointer; }
-      .main .contena .content .part1 .slides1 {
-        display: inline;
-        text-align: center; }
-        .main .contena .content .part1 .slides1 img {
-          width: 125px; }
-        .main .contena .content .part1 .slides1 .slide1 {
-          display: none; }
-        .main .contena .content .part1 .slides1 .active1 {
-          display: block; }
-      .main .contena .content .part2 .number2 {
-        display: block;
-        text-align: center; }
-      .main .contena .content .part2 .btn-wrapper2 {
-        display: block;
-        clear: both;
-        text-align: center;
-        border: solid;
-        border-color: #fff;
-        background-color: #696969;
-        color: #fff; }
-        .main .contena .content .part2 .btn-wrapper2 .up-btn2 {
-          cursor: pointer;
-          display: none; }
-        .main .contena .content .part2 .btn-wrapper2 .down-btn2 {
-          cursor: pointer; }
-      .main .contena .content .part2 .slides2 {
-        display: inline;
-        text-align: center; }
-        .main .contena .content .part2 .slides2 img {
-          width: 125px; }
-        .main .contena .content .part2 .slides2 .slide2 {
-          display: none; }
-        .main .contena .content .part2 .slides2 .active2 {
-          display: block; }
-      .main .contena .content .part3 .number3 {
-        display: block;
-        text-align: center; }
-      .main .contena .content .part3 .btn-wrapper3 {
-        display: block;
-        clear: both;
-        text-align: center;
-        border: solid;
-        border-color: #fff;
-        background-color: #696969;
-        color: #fff; }
-        .main .contena .content .part3 .btn-wrapper3 .up-btn3 {
-          cursor: pointer;
-          display: none; }
-        .main .contena .content .part3 .btn-wrapper3 .down-btn3 {
-          cursor: pointer; }
-      .main .contena .content .part3 .slides3 {
-        display: inline;
-        text-align: center; }
-        .main .contena .content .part3 .slides3 img {
-          width: 125px; }
-        .main .contena .content .part3 .slides3 .slide3 {
-          display: none; }
-        .main .contena .content .part3 .slides3 .active3 {
-          display: block; }
+    .main .contena .part1 .btn-wrapper1 {
+      display: block;
+      clear: both;
+      text-align: center;
+      border: solid;
+      border-color: #fff;
+      background-color: #696969;
+      color: #fff; }
+      .main .contena .part1 .btn-wrapper1 .up-btn1 {
+        cursor: pointer;
+        display: none; }
+      .main .contena .part1 .btn-wrapper1 .down-btn1 {
+        cursor: pointer; }
+    .main .contena .part1 .slides1 {
+      display: inline;
+      text-align: center; }
+      .main .contena .part1 .slides1 img {
+        width: 125px; }
+      .main .contena .part1 .slides1 .slide1 {
+        display: none; }
+      .main .contena .part1 .slides1 .active1 {
+        display: block; }
+    .main .contena .part2 .number2 {
+      display: block;
+      text-align: center; }
+    .main .contena .part2 .btn-wrapper2 {
+      display: block;
+      clear: both;
+      text-align: center;
+      border: solid;
+      border-color: #fff;
+      background-color: #696969;
+      color: #fff; }
+      .main .contena .part2 .btn-wrapper2 .up-btn2 {
+        cursor: pointer;
+        display: none; }
+      .main .contena .part2 .btn-wrapper2 .down-btn2 {
+        cursor: pointer; }
+    .main .contena .part2 .slides2 {
+      display: inline;
+      text-align: center; }
+      .main .contena .part2 .slides2 img {
+        width: 125px; }
+      .main .contena .part2 .slides2 .slide2 {
+        display: none; }
+      .main .contena .part2 .slides2 .active2 {
+        display: block; }
+    .main .contena .part3 .number3 {
+      display: block;
+      text-align: center; }
+    .main .contena .part3 .btn-wrapper3 {
+      display: block;
+      clear: both;
+      text-align: center;
+      border: solid;
+      border-color: #fff;
+      background-color: #696969;
+      color: #fff; }
+      .main .contena .part3 .btn-wrapper3 .up-btn3 {
+        cursor: pointer;
+        display: none; }
+      .main .contena .part3 .btn-wrapper3 .down-btn3 {
+        cursor: pointer; }
+    .main .contena .part3 .slides3 {
+      display: inline;
+      text-align: center; }
+      .main .contena .part3 .slides3 img {
+        width: 125px; }
+      .main .contena .part3 .slides3 .slide3 {
+        display: none; }
+      .main .contena .part3 .slides3 .active3 {
+        display: block; }
 
 footer {
   margin: 100px 0 32px;
