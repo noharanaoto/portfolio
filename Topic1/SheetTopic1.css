@@ -3,13 +3,6 @@ body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN"; }
 
-a {
-  text-decoration: none; }
-
-ul {
-  list-style: none;
-  padding-left: 0; }
-
 header {
   background-color: #fff; }
   header .container {
@@ -22,10 +15,6 @@ header {
       height: 50px;
       margin: 0 0 0 10px;
       position: relative; }
-      header .container .head-left:hover {
-        opacity: 0.1;
-        background-color: #696969;
-        transition: 0.5s; }
       header .container .head-left img {
         width: 30px;
         height: 30px;
@@ -34,6 +23,10 @@ header {
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
         /*要素の大きさの半分ずつを戻す*/ }
+        header .container .head-left img:hover {
+          opacity: 0.1;
+          background-color: #696969;
+          transition: 0.5s; }
 
 .main {
   height: auto;
@@ -50,88 +43,50 @@ header {
     height: 1px;
     border: none; }
   .main .contena {
-    height: 800px;
-    display: flex;
-    justify-content: center; }
-    .main .contena .part {
-      float: left;
-      width: 200px;
-      height: 200px; }
-    .main .contena .part1 .number1 {
-      display: block;
-      text-align: center; }
-    .main .contena .part1 .btn-wrapper1 {
-      display: block;
-      clear: both;
-      text-align: center;
-      border: solid;
-      border-color: #fff;
-      background-color: #696969;
-      color: #fff; }
-      .main .contena .part1 .btn-wrapper1 .up-btn1 {
-        cursor: pointer;
-        display: none; }
-      .main .contena .part1 .btn-wrapper1 .down-btn1 {
-        cursor: pointer; }
-    .main .contena .part1 .slides1 {
-      display: inline;
-      text-align: center; }
-      .main .contena .part1 .slides1 img {
-        width: 125px; }
-      .main .contena .part1 .slides1 .slide1 {
-        display: none; }
-      .main .contena .part1 .slides1 .active1 {
-        display: block; }
-    .main .contena .part2 .number2 {
-      display: block;
-      text-align: center; }
-    .main .contena .part2 .btn-wrapper2 {
-      display: block;
-      clear: both;
-      text-align: center;
-      border: solid;
-      border-color: #fff;
-      background-color: #696969;
-      color: #fff; }
-      .main .contena .part2 .btn-wrapper2 .up-btn2 {
-        cursor: pointer;
-        display: none; }
-      .main .contena .part2 .btn-wrapper2 .down-btn2 {
-        cursor: pointer; }
-    .main .contena .part2 .slides2 {
-      display: inline;
-      text-align: center; }
-      .main .contena .part2 .slides2 img {
-        width: 125px; }
-      .main .contena .part2 .slides2 .slide2 {
-        display: none; }
-      .main .contena .part2 .slides2 .active2 {
-        display: block; }
-    .main .contena .part3 .number3 {
-      display: block;
-      text-align: center; }
-    .main .contena .part3 .btn-wrapper3 {
-      display: block;
-      clear: both;
-      text-align: center;
-      border: solid;
-      border-color: #fff;
-      background-color: #696969;
-      color: #fff; }
-      .main .contena .part3 .btn-wrapper3 .up-btn3 {
-        cursor: pointer;
-        display: none; }
-      .main .contena .part3 .btn-wrapper3 .down-btn3 {
-        cursor: pointer; }
-    .main .contena .part3 .slides3 {
-      display: inline;
-      text-align: center; }
-      .main .contena .part3 .slides3 img {
-        width: 125px; }
-      .main .contena .part3 .slides3 .slide3 {
-        display: none; }
-      .main .contena .part3 .slides3 .active3 {
-        display: block; }
+    margin: 0 auto;
+    width: 400px;
+    position: relative; }
+    .main .contena .scrollBox {
+      width: 400px;
+      height: 400px;
+      border: 2px dotted #696969;
+      overflow: auto; }
+      .main .contena .scrollBox .spaceText {
+        padding-top: 4000px; }
+      .main .contena .scrollBox .buttonTop {
+        position: absolute;
+        top: 300px;
+        left: 300px; }
+        .main .contena .scrollBox .buttonTop #amountTop {
+          fill: #fff; }
+        .main .contena .scrollBox .buttonTop #amountMiddle {
+          fill: #696969;
+          stroke: #696969;
+          stroke-width: 4px; }
+        .main .contena .scrollBox .buttonTop #amountBack {
+          fill: none;
+          stroke: #696969;
+          stroke-width: 3px;
+          opacity: 0.1; }
+  .main .explain {
+    margin: 0 auto;
+    width: 800px;
+    text-align: left; }
+    .main .explain ul {
+      list-style-type: none;
+      padding-left: 0;
+      display: table; }
+      .main .explain ul li {
+        display: table-row;
+        margin-bottom: 0.5em; }
+        .main .explain ul li::after {
+          content: "";
+          display: block;
+          margin-bottom: 0.5em; }
+        .main .explain ul li::before {
+          content: "・";
+          display: table-cell;
+          margin-bottom: 0.4em; }
 
 footer {
   margin: 100px 0 32px;

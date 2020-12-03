@@ -58,18 +58,9 @@ header {
           transition: 0.5s; }
 
 footer {
-  height: 100px;
-  background-color: #696969;
-  text-align: center;
-  position: relative; }
-  footer p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    /*要素の大きさの半分ずつを戻す*/
-    margin: 0 auto;
-    font-size: 14px;
-    color: #ffffff; }
+  margin: 100px 0 32px;
+  color: #2b546a;
+  font-size: 14px;
+  text-align: center; }
 
 /*# sourceMappingURL=SheetTopic2.css.map */

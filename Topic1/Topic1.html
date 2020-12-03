@@ -2,109 +2,59 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>topic1</title>
+    <title>Portfolio - Top Button</title>
     <link rel="stylesheet" href="SheetTopic1.css">
     <script src="jquery-3.5.1.min.js"></script>
   </head>
   <body>
 
-    <!--htmlにはheadeerとfooterが用意されている-->
-
     <header>
       <div class="container">
-        <a href="../index.html">
-          <div class="head-left">
-            <img src="../画像/家.png" alt="home icon">
-          </div>
-        </a>
+         <div class="head-left">
+           <a href="../index.html">
+             <img src="../image/home.png" alt="home icon">
+           </a>
+         </div>
       </div>
     </header>
 
     <!---------------------------------------->
-
     <div class="main">
-
       <div class="title">
-        <h1>cal</h1>
+        <h1>Top Button</h1>
       </div>
       <hr>
 
       <div class="contena">
-
-          <!---------------------------------------->
-
-          <div class="part part1">
-            <div class="btn-wrapper1">
-              <div class="change-btn1 up-btn1">
-                ↑
-              </div>
+        <div class="scrollBox">
+          <p>スクロールしてください</p>
+          <p class="spaceText">finish</p>
+            <div class="buttonTop">
+              <svg id="buttonSVG" width="100" height="100" >
+                <a xlink:href="#">
+                  <circle id="amountBack" cx="50" cy="50" r="25" />
+                  <path id="amountMiddle" fill="none" stroke="#000"></path>
+                  <circle id="amountTop" cx="50" cy="50" r="25" />
+                  <text x="42.5" y="57.5" font-family="Verdana" font-size="15">
+                  ↑
+                  </text>
+                </a>
+              </svg>
             </div>
+        </div><!-- scrollBox終わり -->
+      </div><!-- contena終わり -->
 
-              <ul class="slides1">
-                <li class="slide1 active1" data-option="aaa"><img src="../画像/コーラ.png" alt=""><p>cola</p></li>
-                <li class="slide1"　data-option="bbb"><img src="../画像/ビールジョッキ.png" alt=""><p>beer</p></li>
-                <li class="slide1" data-option="ccc"><img src="../画像/お味噌汁.png" alt=""><p>miso soup</p></li>
-              </ul>
-
-              <div class="number1">
-                230kcal
-              </div>
-            <div class="btn-wrapper1">
-              <div class="change-btn1 down-btn1">
-               ↓
-              </div>
-            </div>
-          </div>
-
-
-      <!---------------------------------------->
-      <div class="part part2">
-        <div class="btn-wrapper2">
-          <div class="change-btn2 up-btn2">
-            ↑
-          </div>
-        </div>
-          <ul class="slides2">
-            <li class="slide2 active2" data-option="300"><img src="../画像/フライドポテト.png" alt=""><p>potato</p></li>
-            <li class="slide2"　data-option="150"><img src="../画像/えだ豆.png" alt=""><p>beems</p></li>
-            <li class="slide2" data-option="300"><img src="../画像/魚.png" alt=""><p>fish</p></li>
-          </ul>
-          <div class="number2">
-            230kcal
-          </div>
-        <div class="btn-wrapper2">
-          <div class="change-btn2 down-btn2">
-           ↓
-          </div>
-        </div>
-        </div>
-
-
-        <!---------------------------------------->
-        <div class="part part3">
-          <div class="btn-wrapper3">
-            <div class="change-btn3 up-btn3">
-              ↑
-            </div>
-          </div>
-            <ul class="slides3">
-              <li class="slide3 active3" data-option="230"><img src="../画像/ハンバーガー.png" alt=""><p>hamburger</p></li>
-              <li class="slide3"　data-option="200"><img src="../画像/焼き鳥.png" alt=""><p>yakitori</p></li>
-              <li class="slide3" data-option="56"><img src="../画像/ご飯.png" alt=""><p>rice</p></li>
-            </ul>
-            <div class="number3">
-              230kcal
-            </div>
-          <div class="btn-wrapper3">
-            <div class="change-btn3 down-btn3">
-             ↓
-            </div>
-          </div>
-        </div>
-
-        <!---------------------------------------->
-
+      <div class="explain">
+        <h2>はじめに</h2>
+        ページトップに戻るボタンや、今どのくらいページをスクロールしたかを表示するUIをよく見かける。これらは片方のみ実装されている場合やそれぞれが独立していることが多かったため、この機能を一つにまとめることでより見やすくなるのではないかと考え、svgタグとjQueryを用いてトップボタンの周りにスクロール量を表示するようにしました。
+        <h2>改善点・手を加えたい部分</h2>
+        <ul>
+          <li>今回のpathタグの使い方ではスクロール量が回りきった時、始点と終点が重なり円が消えてしまうのを枠線を太くし周り切る直前で止めることで綺麗な円を再現しているので、半分回った時にpathを新たに書いて綺麗に塗りだけで表現する</li>
+          <li>矢印のマークを外部のsvgデータを参照してさまざまな図形に変えてみる</li>
+          <li>svgタグの使い方を応用して、コップの水がたまる様子などでスクロール量を表現する</li>
+        </ul>
       </div>
+
       <hr>
     </div><!-- main終わり -->
 

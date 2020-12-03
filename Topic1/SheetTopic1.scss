@@ -1,56 +1,8 @@
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
+
 }
-
-a {
-  text-decoration: none;
-}
-
-ul{
-  list-style: none;
-  padding-left: 0;
-}
-
-@mixin slide-motion($partnumber){
-
-  .number#{$partnumber}{
-    display: block;
-    text-align: center;
-  }
-
-  .btn-wrapper#{$partnumber} {
-    display: block;
-    clear: both;
-    text-align: center;
-    border: solid;
-    border-color: #fff;
-    background-color: #696969;
-    color:#fff;
-    .up-btn#{$partnumber}{
-      cursor: pointer;
-      display: none;
-    }
-    .down-btn#{$partnumber}{
-      cursor: pointer;
-    }
-  }
-
-  .slides#{$partnumber}{
-    display: inline;
-    text-align: center;
-    img{
-      width: 125px;
-    }
-    .slide#{$partnumber}{
-      display: none;
-    }
-    .active#{$partnumber}{
-      display: block;
-    }
-    }
-}
-
 //-----------------------------------------
 
 header{
@@ -67,11 +19,6 @@ header{
       height: 50px;
       margin: 0 0 0 10px;
       position: relative;
-      &:hover{
-        opacity: 0.1;
-        background-color: #696969;
-        transition: 0.5s;
-      }
       img{
         width: 30px;
         height: 30px;
@@ -79,10 +26,15 @@ header{
         top:50%;
         left:50%;
         transform: translateY(-50%) translateX(-50%);/*要素の大きさの半分ずつを戻す*/
-      }
-      }
-    }
+        &:hover{
+          opacity: 0.1;
+          background-color: #696969;
+          transition: 0.5s;
+        }
+        }
+     }
   }
+}
 
 //-----------------------------------------
 
@@ -107,29 +59,65 @@ header{
   }
 
   .contena{
-    height: 800px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
+    .scrollBox{
+      width: 400px;
+      height: 400px;
+      border:2px dotted #696969;
+      overflow: auto;
 
-      .part{
-        float:left;
-        width: 200px;
-        height: 200px;
+      .spaceText{
+        padding-top: 4000px;
       }
+      .buttonTop{
+        position: absolute;
+        top: 300px;
+        left: 300px;
+        #amountTop{
+          fill:#fff;
+        }
+        #amountMiddle{
+          fill:#696969;
+          stroke:#696969;
+          stroke-width:4px;
+        }
+        #amountBack{
+          fill:none;
+          stroke:#696969;
+          stroke-width:3px;
+          opacity: 0.1;
+        }
+      } //--------- buttonTopp終わり
+    }//--------- scrollBox終わり
+  }
 
-      .part1{
-      @include slide-motion(1);
+  .explain{
+    margin: 0 auto;
+    width: 800px;
+    text-align: left;
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+      display: table;
+      li{
+        display: table-row;
+        margin-bottom: 0.5em;
+        &::after{
+          content: "";
+          display: block;
+          margin-bottom: 0.5em;
+        }
+        &::before{
+          content: "・";
+          display: table-cell;
+          margin-bottom: 0.4em;
+        }
       }
-
-      .part2{
-      @include slide-motion(2);
-      }
-
-      .part3{
-      @include slide-motion(3);
-      }
-
     }
+  }
+
 }
 
 //-----------------------------------------
