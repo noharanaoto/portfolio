@@ -42,18 +42,18 @@ header{
 
 .main{
   height: auto;
-  width: 100%;
+  width: 100vw;
 
   .title{
     h1{
       text-align: center;
-      width: 60%;
+      width: 55vw;
       margin: 50px auto;
     }
   }
 
   hr{
-    width: 60%;
+    width: 55vw;
     margin: 50px auto;
     background-color: #696969;
     height: 1px;
@@ -63,7 +63,7 @@ header{
   .contena{
     margin: 0 auto;
     height: auto;
-    width: 60%;
+    width: 55vw;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

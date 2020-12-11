@@ -44,18 +44,18 @@ header{
 
 .main{
   height: auto;
-  width: 100%;
+  width: 100vw;
 
   .title{
     text-align: center;
     h1{
-      width: 60%;
+      width: 55vw;
       margin: 50px auto;
     }
   }
 
   hr{
-    width: 60%;
+    width: 55vw;
     margin: 50px auto;
     background-color: #696969;
     height: 1px;
@@ -63,7 +63,7 @@ header{
   }
 
   #back{
-    width: 800px;
+    width: 55vw;
     height: 300px;
     margin: 0 auto;
     background-color: #696969;
@@ -85,7 +85,7 @@ header{
   }
   .explain{
     margin: 0 auto;
-    width: 800px;
+    width: 55vw;
     text-align: left;
     ul{
       list-style-type: none;

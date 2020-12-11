@@ -30,14 +30,14 @@ header {
 
 .main {
   height: auto;
-  width: 100%; }
+  width: 100vw; }
   .main .title {
     text-align: center; }
     .main .title h1 {
-      width: 60%;
+      width: 55vw;
       margin: 50px auto; }
   .main hr {
-    width: 60%;
+    width: 55vw;
     margin: 50px auto;
     background-color: #696969;
     height: 1px;
@@ -70,7 +70,7 @@ header {
           opacity: 0.1; }
   .main .explain {
     margin: 0 auto;
-    width: 800px;
+    width: 55vw;
     text-align: left; }
     .main .explain ul {
       list-style-type: none;

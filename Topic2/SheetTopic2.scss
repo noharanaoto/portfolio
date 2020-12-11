@@ -42,18 +42,18 @@ header{
 
 .main{
   height: auto;
-  width: 100%;
+  width: 100vw;
 
   .title{
     h1{
       text-align: center;
-      width: 60%;
+      width: 55vw;
       margin: 50px auto;
     }
   }
 
   hr{
-    width: 60%;
+    width: 55vw;
     margin: 50px auto;
     background-color: #696969;
     height: 1px;
@@ -61,14 +61,79 @@ header{
   }
 
   .contena{
+    width: 55vw;
+    height: 60vh;
+    position: relative;
     margin: 0 auto;
-    height: auto;
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: space-between;
- }
+
+    .background{
+      $backgroundHeight:60vh;
+      $backgroundWidth:55vw;
+      $dropHeight:20px;
+      $dropColor:#A1AFD4;
+      $backgroundColor:#41515b;
+      $dropNumber:100;
+
+      width: $backgroundWidth;
+      height: $backgroundHeight;
+      background-color: $backgroundColor;
+      overflow: hidden;
+      position: absolute;
+      top:0;
+      left:0;
+
+      .drop{
+        animation: rain 500ms linear infinite;
+        width: 1px;
+        height: $dropHeight;
+        position: absolute;
+        top: -$dropHeight;
+        left: 0;
+        background-color: $dropColor;
+      }
+      @for $i from 1 through $dropNumber {
+        & > .drop:nth-child(#{$i}) {
+          animation-delay: #{$i * 100}ms;
+          animation-duration: random(250) + 375ms;
+          left: random($backgroundWidth)+vw;
+        }
+      }
+
+      @keyframes rain {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY($backgroundHeight);
+        }
+      }
+    }
+  }
+  .explain{
+    margin: 0 auto;
+    width: 55vw;
+    text-align: left;
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+      display: table;
+      li{
+        display: table-row;
+        margin-bottom: 0.5em;
+        &::after{
+          content: "";
+          display: block;
+          margin-bottom: 0.5em;
+        }
+        &::before{
+          content: "・";
+          display: table-cell;
+          margin-bottom: 0.4em;
+        }
+      }
+    }
+  }
+
 }
 
 //-----------------------------------------
