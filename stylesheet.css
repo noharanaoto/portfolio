@@ -59,14 +59,18 @@ header {
       height: 15em;
       width: 15em;
       color: #fff;
+      border: solid;
+      border-color: #696969;
+      border-width: 2px;
       background-color: #696969; }
       .main .contena .article:hover {
-        opacity: 0.1;
+        background-color: #fff;
+        color: #696969;
         transition: 0.5s; }
 
 footer {
   margin: 100px 0 32px;
-  color: #2b546a;
+  color: #696969;
   font-size: 14px;
   text-align: center; }
 
