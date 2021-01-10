@@ -63,52 +63,9 @@ header{
   .contena{
     width: 55vw;
     height: 60vh;
-    position: relative;
     margin: 0 auto;
-
-    .background{
-      $backgroundHeight:60vh;
-      $backgroundWidth:55vw;
-      $dropHeight:20px;
-      $dropColor:#A1AFD4;
-      $backgroundColor:#41515b;
-      $dropNumber:100;
-
-      width: $backgroundWidth;
-      height: $backgroundHeight;
-      background-color: $backgroundColor;
-      overflow: hidden;
-      position: absolute;
-      top:0;
-      left:0;
-
-      .drop{
-        animation: rain 500ms linear infinite;
-        width: 1px;
-        height: $dropHeight;
-        position: absolute;
-        top: -$dropHeight;
-        left: 0;
-        background-color: $dropColor;
-      }
-      @for $i from 1 through $dropNumber {
-        & > .drop:nth-child(#{$i}) {
-          animation-delay: #{$i * 100}ms;
-          animation-duration: random(250) + 375ms;
-          left: random($backgroundWidth)+vw;
-        }
-      }
-
-      @keyframes rain {
-        from {
-          transform: translateY(0);
-        }
-        to {
-          transform: translateY($backgroundHeight);
-        }
-      }
-    }
   }
+
   .explain{
     margin: 0 auto;
     width: 55vw;
@@ -130,9 +87,9 @@ header{
           display: table-cell;
           margin-bottom: 0.4em;
         }
+       }
       }
-    }
-  }
+     }//explain終わり
 
 }
 
